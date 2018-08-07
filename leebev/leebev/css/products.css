@@ -1,0 +1,682 @@
+#productFrameClose {
+	position: absolute;
+    right: -42px;
+    top: 48px;
+    font-size: 150px;
+    line-height: 0;
+    color: #ae9c4a;
+	cursor: pointer;
+	stroke-width: 20px;
+	display: none;
+}
+
+#productBack {
+	height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 49;
+    display: none;
+	transition: .5s;
+	opacity: 0;
+	top: 0;
+}
+
+#productFramePrevious:hover, #productFrameNext:hover {
+	transform: scale(1.95,3);
+}
+
+#productFramePrevious:active, #productFrameNext:active {
+	transform: scale(1.3,2);
+}
+
+#productFrame {
+	display: none;
+}
+
+.productClicked {
+}
+
+#productFrameHolder {
+    z-index: 50;
+    width: auto;
+    height: auto;
+    position: fixed;
+    //display: none;
+    left: 50%;
+    top: 50%;
+    margin-top: -300px;
+    margin-left: -500px;
+	opacity: 0;
+	transition: 1s;
+}
+
+#productFrameNext {
+	height: auto;
+	width: auto;
+	cursor: pointer;
+	float: right;
+    position: absolute;
+    right: -120px;
+    top: 305px;
+	display: none;
+	text-align: center;
+    font-family: universBold;
+    font-size: 300%;
+    color: #ae9c4a;
+    transform: scale(1.3,2);
+    line-height: 1;
+	transition: 1s;
+}
+
+#productFramePrevious {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    left: -55px;
+    top: 305px;
+    display: none;
+    text-align: center;
+    font-family: universBold;
+    font-size: 300%;
+    color: #ae9c4a;
+    transform: scale(1.3,2);
+    line-height: 1;
+	transition: 1s;
+}
+
+#productFrameShow {
+	width: 1000px;
+	float: left;
+}
+
+#productListContainer {
+	height: auto;
+	background-color: #fff;
+}
+
+#productList {
+	width: 1000px;
+	margin: auto;
+	height: 100%;
+	padding: 40px 0;
+}
+
+#productList1 {
+	width: 1080px;
+	margin: auto;
+	height: 100%;
+	padding: 40px 0;
+}
+
+.productsBrandName {
+	text-transform: uppercase;
+	font-size: 400%;
+	font-family: "universBold";
+	color: #ae9c4a;
+}
+
+.productBrandHolder {
+	margin: 0 40px;
+}
+
+.productContainer {
+	width: 100px;
+	margin: 20px 40px;
+	float: left;
+}
+
+.productsHolder {
+	padding: 10px 0;
+	display: inline-block;
+	height: auto;
+	width: 100%;
+}
+
+.productsHolder hr {
+	border-width: 1px;
+	border-color: #ae9c4a;
+	border-style: solid;
+}
+
+.productImgHolder {
+	height: 260px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.productImg {
+	width: 60px;
+	margin: auto;
+	transition: 1s;
+	position: absolute;
+	bottom: 15px;
+	z-index: 3;
+}
+
+.productImg:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.productShdw {
+	width: 58%;
+    background-color: black;
+    height: 10px;
+    border-radius: 50%;
+    bottom: 13.5px;
+    position: absolute;
+    filter: blur(1.5px);
+    opacity: .6;
+}
+
+.productImgRefHold {
+	margin: auto;
+	transition: 1s;
+	position: absolute;
+	bottom: 15px;
+	transform: rotate(180deg);
+    top: 230px;
+	width: 59px;
+    height: 38px;
+    background-size: cover;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,.6)));
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#000000FF, endColorstr=red);
+	overflow:hidden;
+}
+
+.productShdw1 {
+    width: 8%;
+    background-color: black;
+    height: 16px;
+    border-radius: 50%;
+    bottom: 172px;
+    position: absolute;
+    filter: blur(3px);
+    opacity: .6;
+}
+
+.productImgRefHold1 {
+	margin: auto;
+    transition: 1s;
+    position: absolute;
+    bottom: 15px;
+    transform: rotate(180deg);
+    top: 656px;
+    width: 9.75%;
+    height: 38px;
+    background-size: cover;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,.6)));
+    overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.productImgRef1 {
+	margin: auto;
+	transition: 1s;
+	position: absolute;
+	bottom: 0;
+}
+
+.productImgRef {
+	width: 60px;
+	margin: auto;
+	transition: 1s;
+	position: absolute;
+	bottom: 15px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     
+	.productImgRefHold, .productShdw {
+		display: none;
+	}
+	
+	.productName {
+		position: relative;
+		left: 31px;
+	}
+	
+}
+
+@supports (-ms-ime-align:auto) {
+	
+	.productImgRefHold, .productShdw {
+		display: none;
+	}
+	
+	.productImg {
+		margin: 0;
+	}
+	
+}
+
+.productName {
+	font-family: "universCondensed";
+	text-transform: uppercase;
+	color: #666;
+	text-align: center;
+	font-size: 135%;
+	letter-spacing: .5px;
+	height: 50px;
+}
+
+#productDescriptionHolder {
+	background-color: #fff;
+	padding: 3%;
+	display: inline-block;
+	width: 100%;
+	height: 550px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+}
+
+#productDescriptionHolder div {
+	float: left;
+
+}
+
+#productDescriptionImg {
+	width: 27%;
+	display: flex;
+	justify-content: center;
+	transform: scale(.9);
+}
+
+#productDescriptionImg img {
+	height: 550px;
+	z-index: 1;
+}
+
+#productDescriptionHr {
+	height: 550px;
+	width: 2px;
+	background-color: #ae9c4a;
+	margin: 0 50px 0 3%;
+}
+
+#productDescription {
+	width: 64%;
+	height: 100%;
+	font-size: 130%;
+	color: #444;
+	display: flex;
+	align-items: center;
+}
+
+#productDescriptionC1 {
+	width: 100%;
+}
+
+#productDescription div {
+	display: inline-block;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+#productDescription div p {
+	line-height: 1.5;
+	padding: 30px 0 20px 0;
+}
+
+#productDescription div .spanEvent2 {
+	line-height: 1;
+	font-size: 750%;
+}
+
+#productDescription div a {
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: #ae9c4a;
+	font-size: 120%; 
+	color: #fff;
+	padding: 3px 10px;
+	border-radius: 10px;
+	transition: .5s;
+}
+
+#productDescription div a:hover {
+	background-color: #aaa;
+	padding: 5px 20px;
+}
+
+.productTag {
+	text-transform: uppercase;
+	font-family: "universBold";
+	font-size: 120%;
+}
+
+#productsHome {
+	width: 100%;
+	height: 800px;
+	padding-top: 175px;
+	background-color: #999;
+	opacity: 0;
+	transition: 2s;
+}
+
+#productsHome a {
+	text-decoration: none;
+}
+
+.productsHomeHolder {
+	height: 33.33%;
+	width: 100%;
+}
+
+.productsHomeLink {
+	float: left;
+	width: 50%;
+	height: 100%;
+	transition: .5s width 0s height 0s;
+	position: relative;
+	color: #fff;
+	overflow: hidden;
+}
+
+.productsHomeLink:hover {
+	color: #ae9c4a;
+
+}
+
+.productsHomeLink div {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	transition: .5s;
+	opacity: .5;
+	background-size: cover;
+	background-position: center;
+}
+
+.productsHomeLink:hover div {
+	filter: brightness(50%);
+	transform: scale(1.2);
+}
+
+.productsHomeLink p {
+	width: 540px;
+	height: 30%;
+	margin: 30px;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	font-size: 400%;
+	font-family: universBold;
+	text-transform: uppercase;
+}
+
+#productsBeer p, #productsEnergyDrink p, #productsSoda p {
+	right: 0;
+}
+
+#productsBeer, #productsWater {
+	background-color: #111;
+}
+
+#productsLiquor {
+	background-color: #666;
+}
+
+#productsEnergyDrink {
+	background-color: #444;
+}
+
+#productsAdultBeverage {
+	background-color: #999;
+}
+
+#productsBeer div{
+	background-image: url('../images/whatWeDoImg.jpg');
+}
+
+#productsLiquor div{
+	background-image: url('../images/canvasPic1.jpg');
+	background-position: center;
+}
+
+#productsEnergyDrink div{
+	background-image: url('../images/canvasPic2.jpg');
+	background-position: center;
+}
+
+#productsAdultBeverage div{
+	background-image: url('../images/whatWeDoImg.jpg');
+	background-position: top;
+}
+
+#productsSoda div{
+	background-image: url('../images/canvasPic1.jpg');
+	background-position: left;
+}
+
+#productsWater div{
+	background-image: url('../images/canvasPic2.jpg');
+	background-position: center;
+}
+
+
+#productList form {
+	float: left;
+}
+
+#productList form label {
+	color: #777;
+	text-transform: uppercase;
+	font-size: 125%;
+}
+
+ #productList form label nobr {
+	font-size: 100%;
+ }
+
+#productList form label input[type=submit] {
+	color: #fff;
+	background-color: #ae9c4a;
+	width: 75px;
+	height: 20px;
+	text-transform: uppercase;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #fff;
+	cursor: pointer;
+	transition: .5s;
+}
+
+#productList form label input[type=submit]:hover {
+	color: #ae9c4a;
+	border-color: #ae9c4a;
+	background-color: #fff;
+}
+
+.searchBox {
+	width: auto;
+    display: inline-block;
+	float: right;
+}
+
+.searchBox input[type="text"] {
+	position: relative;
+	width: 285px;
+}
+
+.result {
+	position: absolute;
+    z-index: 100;
+    overflow-y: auto;
+	width: 275px;
+    max-height: 700px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+	background-color: #fff;
+}
+
+.result .productsHolder {
+	padding: 7.5px 15px;
+	width: 87.5%;
+}
+
+.result .productsBrandName {
+	font-size: 250%;
+}
+
+.result .productsHolder hr {
+	margin-bottom: 5px;
+}
+
+.result p {
+	display: block;
+	background-color: #fff;
+	color: #999;
+	padding: 2px 15px;
+	text-transform: uppercase;
+}
+
+.result p:hover {
+	background-color: #eee;
+	color: #ae9c4a;
+}
+
+.result a {
+	font-family: "universCondensed";
+	color: #ae9c4a;
+	text-decoration: none;
+	transition: .5s;
+}
+
+.result p a:hover {
+	color: #fff;
+}
+
+#pageHolder {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pageHolder a {
+	padding: 5px;
+	color: #fff;
+	background-color: #ae9c4a;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .5s;
+}
+
+#pageHolder a:hover {
+	background-color: #fff;
+	color: #ae9c4a;
+}
+
+.searchSelected {
+	background-color: #ddd !important;
+	color: #ae9c4a !important;
+}
+
+mark {
+	background-color: #e6d99d;
+	color: #888;
+}
+
+@media only screen and (max-width: 1280px) {
+	
+	#productList1 {
+		width: 80vw;
+	}
+	
+}
+
+@media only screen and (max-width: 1180px) {
+
+	.productsHomeLink {
+		width: 100%;
+		height: 400px;
+	}
+	
+	.productsHomeLink p {
+		width: auto;
+	}
+
+	#productsHome{
+		height: 1600px;
+		padding-top: 121px;
+	}
+	
+	#productsBeer p, #productsEnergyDrink p, #productsSoda p {
+		left: 0;
+	}
+
+}
+
+@media only screen and (max-width: 1180px) {
+	
+	#productList {
+		width: 90vw;
+	}
+	
+	#productDescription {
+		width: 48vw;
+	}
+	
+}
+
+@media only screen and (max-width: 790px) {
+	
+	.searchBox {
+		float: none;
+		padding-top: 5px;
+	}
+	
+	.searchBox input[type="text"] {
+		width: 85vw;
+	}
+	
+	#productDescriptionHolder {
+		display: flex;
+		flex-direction: column;
+		height:auto;
+		width: 88%;
+		padding: 6%;
+	}
+	
+	#productDescriptionImg {
+		order: 2;
+		width: auto;
+		
+	}
+	
+	#productDescriptionHr {
+		display: none;
+	}
+	
+	#productDescription {
+		order: 1;
+		width: 100%;
+	}
+	
+	#productDescription div .spanEvent2 {
+		font-size: 550%;
+	}
+	
+}
+
+@media only screen and (max-width: 489px) {
+	
+	.productContainer {
+		width: 40px;
+	}
+	
+}
+
+@media only screen and (max-width: 470px) {
+	
+	#productList form label input[type=submit] {
+		width: 86.6vw;
+		margin-top: 5px;
+
+	}
+	
+}
