@@ -1,0 +1,161 @@
+#careersHome {
+	width: 100%;
+	height: 800px;
+	padding-top: 175px;
+	background-color: #999;
+	opacity: 0;
+	transition: 2s;
+}
+
+#careersHome a {
+	text-decoration: none;
+}
+
+.careersHomeHolder {
+	height: 50%;
+	width: 100%;
+}
+
+.careersHomeLink {
+	float: left;
+	height: 100%;
+	transition: .5s width 0s height 0s;
+	position: relative;
+	color: #fff;
+	overflow: hidden;
+}
+
+.crw1 {
+	width: 100%;
+}
+
+.crw2 {
+	width: 50%;
+}
+
+.careersHomeLink:hover {
+	color: #ae9c4a;
+}
+
+.careersHomeLink div {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	transition: .5s;
+	opacity: .5;
+	background-size: cover;
+	background-position: center;
+}
+
+.careersHomeLink:hover div {
+	filter: brightness(50%);
+	transform: scale(1.2);
+}
+
+.careersHomeLink p {
+	width: 540px;
+	height: 30%;
+	margin: 30px;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	font-size: 400%;
+	font-family: universBold;
+	text-transform: uppercase;
+}
+
+#careersOshkosh p {
+	left: 50%;
+    width: 1080px;
+    margin-left: -570px;
+}
+
+#careersRiceLake p {
+	right: 0;
+ }
+
+#careersOshkosh {
+	background-color: #111;
+}
+
+#careersEauClaire {
+	background-color: #555;
+}
+
+#careersRiceLake {
+	background-color: #555;
+}
+
+#careersStevensPoint {
+	background-color: #999;
+}
+
+#careersOshkosh div{
+	background-image: url('../images/canvasPic1.jpg');
+	background-position: 50% 65%;
+}
+
+#careersEauClaire div{
+	background-image: url('../images/canvasPic1.jpg');
+	background-position: center;
+}
+
+#careersRiceLake div{
+	background-image: url('../images/canvasPic2.jpg');
+	background-position: center;
+}
+
+#careersStevensPoint div{
+	background-image: url('../images/whatWeDoImg.jpg');
+	background-position: center;
+}
+
+@media only screen and (max-width: 1280px) {
+
+	#applyContainer {
+		padding-top: 200px;
+	}
+
+}
+
+@media only screen and (max-width: 1180px) {
+
+	.careersHomeLink {
+		width: 100%;
+		height: 400px;
+	}
+
+	#careersHome{
+		height: 1200px;
+		padding-top: 125px;
+	}
+	
+	#careersOshkosh p, #careersRiceLake p {
+		left: 0;
+	}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+	#applyContainer {
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	
+	.careersHomeHolder {
+		height: auto;
+	}
+	
+	footer {
+		height: auto:
+	}
+	
+	#careersOshkosh p {
+		width: 85vw;
+		margin-left: 30px;
+	}
+
+}
